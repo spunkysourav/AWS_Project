@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CMS</title>
+    <style>
+        body{
+        	background-color: lightgreen;
+        }
+        form{
+        	background-color: lightpink;
+        	width: 40%;
+        	margin: auto;
+        	padding: 20px;
+        }
+        h1{
+        	text-align: center;
+        }
+        input{
+        	box-sizing: border-box;
+        	width: 100%;
+        }
+        button{
+        	box-sizing: border-box;
+        	width: 100%;
+        	margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+	<h1>Customer Management System</h1>
+	<form method="post">
+        {% csrf_token %}
+		<label for="Cus_Id">Customer Id: </label><br>
+		<input type="text" name="Cus_Id" id="Cus_Id" placeholder="Enter Id"><br>
+		<label for="Name">Customer Name: </label><br>
+		<input type="text" name="Name" id="Name" placeholder="Enter Name"><br>
+		<label for="Address">Customer Address: </label><br>
+		<input type="text" name="Address" id="Address" placeholder="Enter Address"><br>
+		<label for="Mobile_No">Customer Mobile No.: </label><br>
+		<input type="text" name="Mobile_No" id="Mobile_No" placeholder="Enter Mobile Number"><br>
+		<button type="submit">Add Customer</button>
+	</form>
+</body>
+</html>
